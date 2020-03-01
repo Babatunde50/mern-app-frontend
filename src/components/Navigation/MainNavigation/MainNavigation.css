@@ -1,0 +1,37 @@
+.main-navigation__title {
+  color: #144499;
+}
+.main-navigation__title a {
+  text-decoration: none;
+  color: #144499;
+}
+.main-navigation__menu-btn {
+  width: 1.5rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 2rem;
+  cursor: pointer;
+  z-index: 4000000;
+  margin: 0;
+}
+.main-navigation__menu-btn span {
+  display: block;
+  width: 1.5rem;
+  height: 2px;
+  background: #144499;
+}
+.main-navigation__header-nav {
+  display: none;
+}
+@media (min-width: 768px) {
+  .main-navigation__menu-btn {
+    display: none;
+  }
+  .main-navigation__header-nav {
+    display: block;
+  }
+}

@@ -1,12 +1,14 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+import MainNavigation from './components/Navigation/MainNavigation/MainNavigation';
 
 function App() {
-  return (
-    <div>
-      <h1> Initial Setup </h1>
-    </div>
-  );
+	return (
+		<Router>
+			<MainNavigation />
+		</Router>
+	);
 }
 
 export default App;
