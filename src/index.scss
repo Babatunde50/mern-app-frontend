@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap');
+
+:root {
+	--color-primary: #144499;
+	--color-primary-light: #103169;
+	--color-primary-dark: #103169f5;
+
+	--color-grey-light-1: #faf9f9;
+	--color-grey-light-2: #f4f2f2;
+	--color-grey-light-3: #f0eeee;
+	--color-grey-light-4: #ccc;
+
+	--color-grey-dark-1: #333;
+	--color-grey-dark-2: #777;
+	--color-grey-dark-3: #999;
+
+	--color-input-background: rgb(237, 242, 247)
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	// font-size: 62.5%;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	line-height: 1.7;
+}
+
+.slide-in-right-enter {
+	transform: translateX(100%);
+}
+
+.slide-in-right-enter-active {
+	transform: translateX(0);
+	opacity: 1;
+	transition: all 200ms;
+}
+
+.slide-in-right-exit {
+	transform: translateX(0%);
+	opacity: 1;
+}
+
+.slide-in-right-exit-active {
+	transform: translateX(100%);
+	opacity: 0;
+	transition: all 200ms;
+}
+
+main {
+	margin-top: 5rem;
+}
+
+::selection {
+	background-color: var(--color-primary-light);
+	color: var(--color-grey-dark-1);
+}

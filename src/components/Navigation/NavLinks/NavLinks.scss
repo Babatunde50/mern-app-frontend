@@ -1,14 +1,13 @@
 .nav-links {
 	list-style: none;
 	margin: 0;
-	padding: 3rem 0;
+	padding: 7rem 0;
 	width: 100%;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
-
 	li {
 		margin: 1rem 0;
 		color: white;
@@ -20,12 +19,23 @@
 		padding: 1.5rem;
 		width: 100%;
 		font-weight: bolder;
-		font-size: 1.2rem;
+		font-size: 1.6rem;
 
 		&:hover,
 		&:active,
 		&.active {
 			color: #6dd47e;
+		}
+	}
+
+	&__cta {
+		border: 1px solid #144499;
+		border-radius: 5px;
+		padding: 1.5rem 3rem;
+
+		&:hover {
+			background-color: #144499;
+			color: white !important;
 		}
 	}
 }
@@ -37,9 +47,9 @@
 
 		a {
 			color: #144499;
-			font-size: 1rem;
+			font-size: 1.6rem;
 			font-weight: bold;
-			padding: 0.8rem;
+			padding: 1.5rem;
 		}
 	}
 }

@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 
 import MainHeader from '../MainHeader/MainHeader';
 import NavLinks from '../NavLinks/NavLinks';
-import SideDrawer from '../SideDrawer/SideDrawer'
+import SideDrawer from '../SideDrawer/SideDrawer';
 import './MainNavigation.scss';
 
 export default function MainNavigation() {
-    const [drawerIsOpen, setDrawerIsOpen] = useState(false);
-	const openDrawerHandler= () => {
-		setDrawerIsOpen(true);
+	const [drawerIsOpen, setDrawerIsOpen] = useState(false);
+	const toggleDrawerHandler = () => {
+		setDrawerIsOpen(!drawerIsOpen);
 	};
 	const closeDrawerHandler = () => {
 		setDrawerIsOpen(false);
@@ -28,10 +28,10 @@ export default function MainNavigation() {
 				<nav className="main-navigation__header-nav">
 					<NavLinks />
 				</nav>
-				<button className="main-navigation__menu-btn" onClick={openDrawerHandler}>
-					<span />
-					<span />
-					<span />
+				<button className="main-navigation__menu-btn" onClick={toggleDrawerHandler}>
+					<span className={drawerIsOpen && 'main-navigation__menu-btn__before'} />
+					<span className={drawerIsOpen && 'main-navigation__menu-btn__middle'} />
+					<span className={drawerIsOpen && 'main-navigation__menu-btn__after'} />
 				</button>
 			</MainHeader>
 		</Fragment>

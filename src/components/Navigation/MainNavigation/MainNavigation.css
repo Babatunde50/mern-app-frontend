@@ -15,14 +15,36 @@
   justify-content: space-around;
   margin-right: 2rem;
   cursor: pointer;
-  z-index: 4000000;
+  z-index: 400;
   margin: 0;
+  position: relative;
+}
+.main-navigation__menu-btn:focus {
+  outline: none;
 }
 .main-navigation__menu-btn span {
   display: block;
   width: 1.5rem;
   height: 2px;
   background: #144499;
+  transition: all 0.2s;
+}
+.main-navigation__menu-btn__middle {
+  background: transparent !important;
+}
+.main-navigation__menu-btn__before {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 10px;
+  width: 2rem;
+  height: 3px;
+}
+.main-navigation__menu-btn__after {
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 10px;
+  width: 2rem;
+  height: 3px;
 }
 .main-navigation__header-nav {
   display: none;

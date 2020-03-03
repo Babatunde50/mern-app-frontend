@@ -17,13 +17,40 @@
     justify-content: space-around;
     margin-right: 2rem;
     cursor: pointer;
-    z-index: 4000000;
+    z-index: 400;
     margin: 0;
+    position: relative;
+
+    &:focus {
+      outline: none;
+    }
+    
     span {
         display: block;
         width: 1.5rem;
         height: 2px;
         background: #144499;
+        transition: all .2s;
+      }
+
+      &__middle {
+        background: transparent !important;
+      }
+
+      &__before {
+        transform: rotate(45deg);
+        position: absolute;
+        top: 10px;
+        width: 2rem;
+        height: 3px;
+      }
+
+      &__after {
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 10px;
+        width: 2rem;
+        height: 3px;
       }
   }
 

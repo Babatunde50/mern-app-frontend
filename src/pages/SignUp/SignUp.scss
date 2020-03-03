@@ -1,0 +1,24 @@
+.signup {
+	text-align: center;
+    padding: 12rem 0;
+    background: var(--color-primary-light);
+
+	& h2 {
+        font-size: 2.5rem;
+        color: var(--color-primary);
+	}
+
+	&--box {
+		width: 90%;
+		margin: 0 auto;
+		background: white;
+		padding: 3rem;
+		border-radius: 1.5rem;
+		font-size: 1.6rem;
+        max-width: 45rem;
+        
+        form {
+            padding: 3rem 0;
+        }
+	}
+}

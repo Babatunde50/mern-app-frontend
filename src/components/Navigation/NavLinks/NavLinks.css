@@ -1,7 +1,7 @@
 .nav-links {
   list-style: none;
   margin: 0;
-  padding: 3rem 0;
+  padding: 7rem 0;
   width: 100%;
   height: 100%;
   display: flex;
@@ -19,12 +19,21 @@
   padding: 1.5rem;
   width: 100%;
   font-weight: bolder;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
 }
 .nav-links a:hover,
 .nav-links a:active,
 .nav-links a.active {
   color: #6dd47e;
+}
+.nav-links__cta {
+  border: 1px solid #144499;
+  border-radius: 5px;
+  padding: 1.5rem 3rem;
+}
+.nav-links__cta:hover {
+  background-color: #144499;
+  color: white !important;
 }
 @media (min-width: 768px) {
   .nav-links {
@@ -33,8 +42,8 @@
   }
   .nav-links a {
     color: #144499;
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-weight: bold;
-    padding: 0.8rem;
+    padding: 1.5rem;
   }
 }
