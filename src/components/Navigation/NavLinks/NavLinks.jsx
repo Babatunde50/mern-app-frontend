@@ -21,7 +21,7 @@ export default function NavLinks() {
 				<NavLink to="/matches"> Matches </NavLink>
 			</li>
 			<li>
-				<NavLink className="nav-links__cta" to="/matches"> Create a Free Account </NavLink>
+				<NavLink className="nav-links__cta" to="/signup"> Create a Free Account </NavLink>
 			</li>
 		</ul>
 	);

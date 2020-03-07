@@ -2,8 +2,8 @@ import React from 'react'
 
 import './Button.scss'
 
-export default function Button({ children }) {
+export default function Button({ children, classes="" }) {
     return (
-        <button className="btn btn--primary"> {children} </button>
+        <button className={`btn ${classes}`}> {children} </button>
     )
 }

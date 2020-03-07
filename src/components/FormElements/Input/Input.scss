@@ -47,5 +47,17 @@
         transform: translateY(-4rem);
     }
 
+    &__group--invalid label,
+    &__group--invalid p {
+      color: red;
+      text-align: left;
+      margin-top: -10px;
+    }
+    
+    &__group--invalid input,
+    &__group--invalid textarea {
+      border-color: red;
+      background: #ffd1d1;
+    }
 
 }

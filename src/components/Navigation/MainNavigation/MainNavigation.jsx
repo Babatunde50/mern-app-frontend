@@ -29,9 +29,9 @@ export default function MainNavigation() {
 					<NavLinks />
 				</nav>
 				<button className="main-navigation__menu-btn" onClick={toggleDrawerHandler}>
-					<span className={drawerIsOpen && 'main-navigation__menu-btn__before'} />
-					<span className={drawerIsOpen && 'main-navigation__menu-btn__middle'} />
-					<span className={drawerIsOpen && 'main-navigation__menu-btn__after'} />
+					<span className={drawerIsOpen ? 'main-navigation__menu-btn__before' : ''} />
+					<span className={drawerIsOpen ? 'main-navigation__menu-btn__middle' : ''} />
+					<span className={drawerIsOpen ? 'main-navigation__menu-btn__after' : '' } />
 				</button>
 			</MainHeader>
 		</Fragment>
