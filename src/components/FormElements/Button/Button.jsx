@@ -2,8 +2,8 @@ import React from 'react'
 
 import './Button.scss'
 
-export default function Button({ children, classes="" }) {
+export default function Button({ children, classes="", disabled, click }) {
     return (
-        <button className={`btn ${classes}`}> {children} </button>
+        <button onClick={click} className={`btn ${classes}`} disabled={disabled}> {children} </button>
     )
 }

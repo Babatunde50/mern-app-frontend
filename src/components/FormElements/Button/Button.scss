@@ -15,7 +15,8 @@
 	}
 
 	&:hover,
-	&:focus {
+	&:focus,
+	&:not(&:disabled) {
 		outline: none;
 		transform: translateY(-3px);
 		box-shadow: 0 1rem 2rem rgba(#000, 0.2);
@@ -29,6 +30,11 @@
 	&:active {
 		transform: translateY(-1px);
 		box-shadow: 0 0.5rem 1rem rgba(#000, 0.2);
+	}
+
+	&:disabled {
+  		background: #ccc;
+		cursor: not-allowed;
 	}
 
 	&--white {

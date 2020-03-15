@@ -13,19 +13,25 @@
   cursor: pointer;
 }
 .btn:hover,
-.btn:focus {
+.btn:focus,
+.btn:not(.btn:disabled) {
   outline: none;
   transform: translateY(-3px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 .btn:hover::after,
-.btn:focus::after {
+.btn:focus::after,
+.btn:not(.btn:disabled)::after {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
 }
 .btn:active {
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+.btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
 }
 .btn--white {
   background-color: #fff;

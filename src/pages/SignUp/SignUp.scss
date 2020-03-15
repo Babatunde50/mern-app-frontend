@@ -1,8 +1,12 @@
 .signup {
 	text-align: center;
-    padding: 12rem 0;
+	padding-top: 8rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
     background: var(--color-primary-light);
-
+	min-height: 100vh;
 	& h2 {
         font-size: 2.5rem;
         color: var(--color-primary);

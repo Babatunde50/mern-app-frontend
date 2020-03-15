@@ -32,8 +32,9 @@ export default function Input({ type = 'text', placeholder, id, options = null, 
 	useEffect(() => {
 		onInput(id, value, isValid);
 	}, [id, value, isValid, onInput]);
-	const changeHandler = event => {
-		dispatch({ type: 'CHANGE', val: event.target.value, validators: validators });
+	const changeHandler = (event, type) => {
+		const value = type === 'select' ? event.value : event.target.value
+		dispatch({ type: 'CHANGE', val: value , validators: validators });
 	};
 	const touchHandler = () => {
 		dispatch({
@@ -43,13 +44,26 @@ export default function Input({ type = 'text', placeholder, id, options = null, 
 	return (
 		<div className={`form__group ${!inputState.isValid && inputState.isTouched && 'form__group--invalid'}`}>
 			{type === 'select' ? (
-				<Select value={inputState.value} onChange={changeHandler} onBlur={touchHandler} className="form__input" options={options} placeholder={placeholder} />
+				<Select
+					onChange={ (e) => changeHandler(e, 'select')} 
+					options={options} 
+					id={id}
+					placeholder={placeholder} />
 			) : (
-				<input value={inputState.value} onChange={changeHandler} onBlur={touchHandler}  type={type} className="form__input" placeholder={placeholder} id={id} required />
+				<>
+				<input 
+					value={inputState.value} 
+					onChange={changeHandler} 
+					onBlur={touchHandler}  
+					type={type} 
+					className="form__input" 
+					placeholder={placeholder} 
+					id={id} />
+				<label htmlFor={id} className="form__label">
+					{placeholder}
+				</label>
+				</>
 			)}
-			<label htmlFor={id} className="form__label">
-				{placeholder}
-			</label>
 			{!inputState.isValid && inputState.isTouched && <p> {errorText} </p>}
 		</div>
 	);
