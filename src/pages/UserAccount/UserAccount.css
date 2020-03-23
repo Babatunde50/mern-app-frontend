@@ -1,0 +1,30 @@
+.user-account {
+  display: flex;
+  flex-direction: column;
+}
+.user-account--nav {
+  flex: 0.3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.user-account--nav .nav-links {
+  flex-direction: column;
+  padding: 1.5rem;
+  justify-content: start;
+  text-align: center;
+}
+.user-account--nav .nav-links a {
+  color: var(--color-primary);
+}
+.user-account--content {
+  flex: 1;
+  height: 500px;
+  width: 100%;
+}
+@media (min-width: 640px) {
+  .user-account {
+    flex-direction: row;
+  }
+}

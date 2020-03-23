@@ -14,7 +14,7 @@
 	--color-grey-dark-2: #777;
 	--color-grey-dark-3: #999;
 
-	--color-input-background: rgb(237, 242, 247)
+	--color-input-background: rgb(237, 242, 247);
 }
 
 * {
@@ -29,8 +29,39 @@
 }
 
 html {
-	box-sizing: border-box;
-	// font-size: 62.5%;
+	font-size: 17px;
+}
+@media (max-width: 900px) {
+	html {
+		font-size: 15px;
+	}
+}
+@media (max-width: 400px) {
+	html {
+		font-size: 13px;
+	}
+}
+
+/* Modules will scale with document */
+.header {
+	font-size: 1.5rem;
+}
+.footer {
+	font-size: 0.75rem;
+}
+.sidebar {
+	font-size: 0.85rem;
+}
+
+/* Type will scale with modules */
+h1 {
+	font-size: 3em;
+}
+h2 {
+	font-size: 2.5em;
+}
+h3 {
+	font-size: 2em;
 }
 
 body {
@@ -67,4 +98,12 @@ main {
 ::selection {
 	background-color: var(--color-primary-light);
 	color: var(--color-grey-dark-1);
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
 }

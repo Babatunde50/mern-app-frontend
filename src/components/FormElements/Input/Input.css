@@ -34,8 +34,26 @@
   transition: all 0.3s;
   text-align: left;
 }
+.form__label--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
 .form__input:placeholder-shown + label {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-4rem);
+}
+.form__group--invalid label,
+.form__group--invalid p {
+  color: red;
+  text-align: left;
+  margin-top: -10px;
+}
+.form__group--invalid input,
+.form__group--invalid textarea {
+  border-color: red;
+  background: #ffd1d1;
+}
+.form .react-select__control {
+  background: var(--color-input-background) !important;
 }

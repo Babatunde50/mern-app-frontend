@@ -12,6 +12,9 @@
   border: none;
   cursor: pointer;
 }
+.btn--small {
+  padding: 0.5rem 2rem;
+}
 .btn:hover,
 .btn:focus,
 .btn:not(.btn:disabled) {
@@ -35,10 +38,16 @@
 }
 .btn--white {
   background-color: #fff;
-  color: var(--color-grey-dark-3);
+  color: var(--color-primary);
+  border-radius: 0;
 }
 .btn--white::after {
   background-color: #fff;
+}
+.btn--diff {
+  border-radius: 0;
+  background: var(--color-primary-dark);
+  color: var(--color-grey-light-1);
 }
 .btn--primary {
   background-color: var(--color-primary);
